@@ -40,6 +40,6 @@ git remote add origin <your_fork_url_here>
 This is so you can store the features on your fork until you issue a merge request to aldefouw/redcap_rsvc.
 
 
-### To update the repositories:
+### To UPDATE the repositories:
 
-`./update_repos.sh`
+Run `./update_repos.sh` from this repository.
