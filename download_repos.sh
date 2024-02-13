@@ -22,6 +22,7 @@ done
 mv cypress.config.js redcap_cypress/cypress.config.js 
 mv cypress.env.json redcap_cypress/cypress.env.json
 
+#Install the REDCap RSVC repository so automated feature tests can run
 cd redcap_cypress
 git clone git@github.com:aldefouw/redcap_rsvc.git
 git submodule add git@github.com:aldefouw/redcap_rsvc.git redcap_rsvc
