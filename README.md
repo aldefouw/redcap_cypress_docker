@@ -29,11 +29,11 @@ To download the repositories:
 
 6. Configure the Feature Test Remote as needed to match your own Fork
 
-`cd redcap_cypress/redcap_rsvc`
-
-`git remote rename origin upstream`
-
-`git remote add origin <your_fork_url_here>`
+```
+cd redcap_cypress/redcap_rsvc
+git remote rename origin upstream
+git remote add origin <your_fork_url_here>
+```
 
 This is so you can store the features on your fork until you issue a merge request to aldefouw/redcap_rsvc.
 
