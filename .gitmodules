@@ -1,0 +1,9 @@
+[submodule "redcap_cypress"]
+	path = redcap_cypress
+	url = git@github.com:aldefouw/redcap_cypress.git
+[submodule "redcap_docker"]
+	path = redcap_docker
+	url = git@github.com:aldefouw/redcap_docker.git
+[submodule "redcap_source"]
+	path = redcap_source
+	url = git@github.com:aldefouw/redcap_source.git
