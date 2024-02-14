@@ -4,6 +4,3 @@
 [submodule "redcap_docker"]
 	path = redcap_docker
 	url = git@github.com:aldefouw/redcap_docker.git
-[submodule "redcap_source"]
-	path = redcap_source
-	url = git@github.com:aldefouw/redcap_source.git
