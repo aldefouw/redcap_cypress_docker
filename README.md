@@ -5,6 +5,12 @@ This repository includes scripts to perform a standard download of all of the re
 - REDCap Docker
 - REDCap Source *
 
+### Software Prerequisites:
+- Visual Studio Code
+- Git
+- Docker Desktop
+- Node.js
+
 *REDCap Source is only available after you are authorized to access it and you have been cleared to have a valid license of REDCap.  
 
 ### To DOWNLOAD the repositories:
