@@ -2,3 +2,4 @@ redcap_cypress/*
 redcap_docker/*
 redcap_source/*
 .idea
+.DS_Store
