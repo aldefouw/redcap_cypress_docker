@@ -1,4 +1,4 @@
-# redcap_cypress_docker
+# REDCap Cypress Developer Toolkit
 
 This repository includes scripts to perform a standard download of all of the repositories necessary for automated testing with the REDCap Cypress Test Framework: 
 - REDCap Cypress
