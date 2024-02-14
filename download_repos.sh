@@ -3,8 +3,8 @@
 git submodule init
 
 # Define submodule URLs and paths
-declare -a submodule_urls=("git@github.com:aldefouw/redcap_cypress.git" "git@github.com:aldefouw/redcap_docker.git" "git@github.com:aldefouw/redcap_source.git")
-declare -a submodule_paths=("redcap_cypress" "redcap_docker" "redcap_source")
+declare -a submodule_urls=("git@github.com:aldefouw/redcap_cypress.git" "git@github.com:aldefouw/redcap_docker.git")
+declare -a submodule_paths=("redcap_cypress" "redcap_docker")
 
 # Clone submodule repositories and add them as submodules
 for ((i=0; i<${#submodule_urls[@]}; ++i)); do
