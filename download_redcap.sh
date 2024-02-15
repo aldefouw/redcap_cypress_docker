@@ -26,13 +26,17 @@ else
 
     # Perform the curl request with username and password
     curl -o ${zip_file} -d "username=${username}&password=${password}&version=${redcap_version}&install=1" -X POST ${url}
+
+    if [ $? -eq 0 ]; then
+      echo "Zip file downloaded successfully."
+    fi
 fi
 
 #Target Directory
 target_directory=./tmp
 
-# Check if the curl request was successful
-if [ $? -eq 0 ]; then
+# Check if the curl request (or zip exists)
+if [ -e "$zip_file" ]; then
 
     # Unzip the file to the target directory
     unzip -q "${zip_file}" -d ${target_directory}
