@@ -54,3 +54,13 @@ This is so you can store the features on your fork until you issue a merge reque
 ### To UPDATE the repositories:
 
 Run `./update_repos.sh` from this repository.
+
+
+### To rebuild Docker containers
+
+If changes are made to the Docker images, you will need to rebuild your containers before spooling them up.
+
+```
+docker compose build
+
+```
