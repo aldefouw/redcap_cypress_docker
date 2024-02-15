@@ -96,12 +96,11 @@ docker compose build
 
 If you want to test against a new version of REDCap that you've downloaded, first [Download REDCap](#download-repositories).
 
-Then change the following variable in `redcap_cypress/cypress.env.json`:
+Then change the following variable in `redcap_cypress/cypress.env.json` to the specific version of REDCap you want to test:
 
 ```
     "redcap_version": "13.1.37"
 ```
-
 
 ### SSH Key needed
 
