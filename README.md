@@ -23,27 +23,31 @@ This repository includes scripts to perform a standard download of all of the re
 
 4. Start your REDCap Docker containers (PHP/Apache, MySQL, Mailhog).  
 
-`cd redcap_docker`
-
-`docker compose up`
+    ```
+    cd redcap_docker
+    docker compose up
+    ```
 
 5. Install Cypress & dependencies for REDCap Cypress Test Framework (RCTF).
 
-`cd redcap_cypress`
-
-`npm install`
+    ```
+    cd redcap_cypress
+    npm install
+    ```
 
 6. Open Cypress.
 
-`npx cypress open`
+   ```
+   npx cypress open
+   ```
 
 7. Configure the redcap_rsvc (Feature Tests) repository as needed to match your own Fork.
 
-```
-cd redcap_cypress/redcap_rsvc
-git remote rename origin upstream
-git remote add origin <your_fork_url_here>
-```
+    ```
+    cd redcap_cypress/redcap_rsvc
+    git remote rename origin upstream
+    git remote add origin <your_fork_url_here>
+    ```
 
 This is so you can store the features on your fork until you issue a merge request to aldefouw/redcap_rsvc.
 
