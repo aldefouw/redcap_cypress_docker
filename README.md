@@ -15,13 +15,13 @@ This repository includes scripts to download all the repositories necessary for 
 
 ### Download repositories:
 
-1. Clone this repository to your machine.
+1. **Clone this repository to your machine.**
 
 ```
 git clone git@github.com:aldefouw/redcap_cypress_docker.git
 ```
 
-2. Download Repositories
+2. **Download Repositories**
 
 Execute download_repos.sh to download the repositories.  
 
@@ -31,7 +31,7 @@ This script also configures base settings for Cypress.
 ./download_repos.sh
 ```
 
-3. Download REDCap
+3. **Download REDCap**
 
 Execute download_redcap.sh to download specific version of REDCap you need.  Follow onscreen prompts which require credentials for REDCap Community site.
 
