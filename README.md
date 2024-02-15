@@ -1,74 +1,116 @@
 # REDCap Cypress Developer Toolkit
 
-This repository includes scripts to perform a standard download of all of the repositories necessary for automated testing with the REDCap Cypress Test Framework: 
-- REDCap Cypress
-- REDCap Docker
-- REDCap Source *
-
-*REDCap Source is only available to those with access via the REDCap Community site due to licensing requirements.
+This repository includes scripts to download all the repositories necessary for a developer to begin automated testing with the REDCap Cypress Test Framework: 
+- [REDCap Cypress](https://github.com/aldefouw/redcap_cypress)
+- [REDCap Docker](https://github.com/aldefouw/redcap_docker)
+- REDCap Source - Not a repository. Available via the REDCap Community site with username and password.
 
 ### Software Prerequisites:
-- Visual Studio Code
 - Git
 - Docker Desktop
 - Node.js
 
-### To DOWNLOAD the repositories:
+### Recommended IDE:
+- Visual Studio Code
+
+### Download repositories:
 
 1. Clone this repository to your machine.
 
-2. Run `./download_repos.sh` to download the repositories.  This script also configures base settings for Cypress.
+```
+git clone git@github.com:aldefouw/redcap_cypress_docker.git
+```
 
-3. Run `./download_redcap.sh` to download specific version of REDCap you need.  Follow onscreen prompts.   
+2. [Download Repositories](#download-repositories) 
 
-4. Start your REDCap Docker containers (PHP/Apache, MySQL, Mailhog).  
+Execute download_repos.sh to download the repositories.  
 
-    ```
-    cd redcap_docker
-    docker compose up
-    ```
+This script also configures base settings for Cypress.
 
-5. Install Cypress & dependencies for REDCap Cypress Test Framework (RCTF).
+```
+./download_repos.sh
+```
 
-    ```
-    cd redcap_cypress
-    npm install
-    ```
+3. [Download REDCap](#download-redcap) 
 
-6. Open Cypress.
+Execute download_redcap.sh to download specific version of REDCap you need.  Follow onscreen prompts which require credentials for REDCap Community site.
 
-   ```
-   npx cypress open
-   ```
+```
+./download_redcap.sh
+```   
 
-7. Configure the redcap_rsvc (Feature Tests) repository as needed to match your own Fork.
+### Start REDCap Test Environment:
 
-    ```
-    cd redcap_cypress/redcap_rsvc
-    git remote rename origin upstream
-    git remote add origin <your_fork_url_here>
-    ```
+Start your REDCap Docker containers (PHP/Apache, MySQL, Mailhog).  
+
+```
+cd redcap_docker
+docker compose up
+```
+    
+### Configure & Start Cypress:
+
+1. Install Cypress & dependencies for REDCap Cypress Test Framework (RCTF).
+
+```
+cd redcap_cypress
+npm install
+```
+
+2. Open Cypress.
+
+```
+npx cypress open
+```
+
+### Contribute to Feature Tests:
+
+1. Create your own fork of redcap_rsvc that is based upon https://github.com/aldefouw/redcap_rsvc
+
+2. Configure the cloned redcap_rsvc repository as needed to match your own Fork.
+
+```
+cd redcap_cypress/redcap_rsvc
+git remote rename origin upstream
+git remote add origin <your_fork_url_here>
+```
 
 This is so you can store the features on your fork until you issue a merge request to aldefouw/redcap_rsvc.
 
-### To UPDATE the repositories:
+### Update Repositories:
 
 Run `./update_repos.sh` from this repository.
 
 
 ## Additional Information
 
-### To rebuild Docker containers
+### Rebuild Docker containers
 
 If changes are made to the Docker images, you will need to rebuild your containers before spooling them up.
 
 ```
 docker compose build
+```
+
+### Configure Cypress REDCap Version
+
+If you want to test against a new version of REDCap that you've downloaded, first <a id="#download-redcap">Download REDCap</a>.
+
+Then change the following variable in `redcap_cypress/cypress.env.json`:
 
 ```
+    "redcap_version": "13.1.37"
+```
+
 
 ### SSH Key needed
 
-You will need to configure an SSH key on Github for this process to work correctly.  
+You will need to place your public key on GitHub for this process to work correctly.
 
-For more information, please consult GitHub's SSH documentation here: https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+To generate a key on your local machine, most of time the command is:
+```
+ssh-keygen
+```
+
+Generating a key is beyond the scope of what this documentation can cover, but please consult GitHub's SSH documentation here for more information: 
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh
