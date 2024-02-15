@@ -19,10 +19,10 @@ for ((i=0; i<${#submodule_urls[@]}; ++i)); do
 done
 
 #Move Base Configurations for Cypress
-mv cypress.config.js redcap_cypress/cypress.config.js 
-mv cypress.env.json redcap_cypress/cypress.env.json
+mv ./config/cypress.config.js ./redcap_cypress/cypress.config.js
+mv ./config/cypress.env.json ./redcap_cypress/cypress.env.json
 
 #Install the REDCap RSVC repository so automated feature tests can run
-cd redcap_cypress
+cd redcap_cypress || exit
 git clone git@github.com:aldefouw/redcap_rsvc.git
 git submodule add git@github.com:aldefouw/redcap_rsvc.git redcap_rsvc
