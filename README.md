@@ -5,37 +5,39 @@ This repository includes scripts to perform a standard download of all of the re
 - REDCap Docker
 - REDCap Source *
 
+*REDCap Source is only available to those with access via the REDCap Community site due to licensing requirements.
+
 ### Software Prerequisites:
 - Visual Studio Code
 - Git
 - Docker Desktop
 - Node.js
 
-*REDCap Source is only available after you are authorized to access it and you have been cleared to have a valid license of REDCap.  
-
 ### To DOWNLOAD the repositories:
 
-1. Clone this repo to your machine.
+1. Clone this repository to your machine.
 
-2. Run `./download_repos.sh` to download the responsitories.  This script also configures base settings for Cypress.
+2. Run `./download_repos.sh` to download the repositories.  This script also configures base settings for Cypress.
 
-3. Start your REDCap Docker containers.  
+3. Run `./download_redcap.sh` to download specific version of REDCap you need.  Follow onscreen prompts.   
+
+4. Start your REDCap Docker containers (PHP/Apache, MySQL, Mailhog).  
 
 `cd redcap_docker`
 
 `docker compose up`
 
-4. Install Cypress & dependencies
+5. Install Cypress & dependencies for REDCap Cypress Test Framework (RCTF).
 
 `cd redcap_cypress`
 
 `npm install`
 
-5. Open Cypress 
+6. Open Cypress.
 
 `npx cypress open`
 
-6. Configure the Feature Test Remote as needed to match your own Fork
+7. Configure the redcap_rsvc (Feature Tests) repository as needed to match your own Fork.
 
 ```
 cd redcap_cypress/redcap_rsvc
@@ -44,7 +46,6 @@ git remote add origin <your_fork_url_here>
 ```
 
 This is so you can store the features on your fork until you issue a merge request to aldefouw/redcap_rsvc.
-
 
 ### To UPDATE the repositories:
 
