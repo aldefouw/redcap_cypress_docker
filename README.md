@@ -17,9 +17,11 @@ This repository includes scripts to perform a standard download of all of the re
 
 1. Clone this repo to your machine.
 
-2. Run `./download_repos.sh` to download the responsitories.  This script also configures base settings for Cypress.
+2. Run `./download_repos.sh` to download the repositories.  This script also configures base settings for Cypress.
 
-3. Start your REDCap Docker containers.  
+3. Run `./download_full_redcap.sh` to download the REDCap Source.  This script only works with a valid username and password.
+
+4. Start your REDCap Docker containers.  
 
 `cd redcap_docker`
 
