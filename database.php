@@ -39,7 +39,7 @@ $db_ssl_verify_server_cert = false; // Set to TRUE to force the database connect
 // Add a random value for the $salt variable below, preferably alpha-numeric with 8 characters or more. This value wll be 
 // used for data de-identification hashing for data exports. Do NOT change this value once it has been initially set.
 
-$salt = '';
+$salt = '1669ed600d';
 
 
 //********************************************************************************************************************
