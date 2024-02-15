@@ -7,7 +7,7 @@ This repository includes scripts to perform a standard download of all of the re
 
 *REDCap Source is only available to those with access via the REDCap Community site due to licensing requirements.
 
-##SSH Key needed
+### SSH Key needed
 
 You will need to configure an SSH key on Github for this process to work correctly.  
 
