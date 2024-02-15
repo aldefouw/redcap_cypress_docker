@@ -7,12 +7,6 @@ This repository includes scripts to perform a standard download of all of the re
 
 *REDCap Source is only available to those with access via the REDCap Community site due to licensing requirements.
 
-### SSH Key needed
-
-You will need to configure an SSH key on Github for this process to work correctly.  
-
-For more information, please consult GitHub's SSH documentation here: https://docs.github.com/en/authentication/connecting-to-github-with-ssh
-
 ### Software Prerequisites:
 - Visual Studio Code
 - Git
@@ -62,6 +56,8 @@ This is so you can store the features on your fork until you issue a merge reque
 Run `./update_repos.sh` from this repository.
 
 
+## Additional Information
+
 ### To rebuild Docker containers
 
 If changes are made to the Docker images, you will need to rebuild your containers before spooling them up.
@@ -70,3 +66,9 @@ If changes are made to the Docker images, you will need to rebuild your containe
 docker compose build
 
 ```
+
+### SSH Key needed
+
+You will need to configure an SSH key on Github for this process to work correctly.  
+
+For more information, please consult GitHub's SSH documentation here: https://docs.github.com/en/authentication/connecting-to-github-with-ssh
