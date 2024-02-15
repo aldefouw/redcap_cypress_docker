@@ -21,7 +21,9 @@ This repository includes scripts to download all the repositories necessary for 
 git clone git@github.com:aldefouw/redcap_cypress_docker.git
 ```
 
-2. [Download Repositories](#download-repositories) 
+2. Download Repositories
+
+<a id="#download-repositories"></a>
 
 Execute download_repos.sh to download the repositories.  
 
@@ -31,7 +33,9 @@ This script also configures base settings for Cypress.
 ./download_repos.sh
 ```
 
-3. [Download REDCap](#download-redcap) 
+3. Download REDCap
+
+<a id="#download-redcap"></a>
 
 Execute download_redcap.sh to download specific version of REDCap you need.  Follow onscreen prompts which require credentials for REDCap Community site.
 
@@ -94,7 +98,7 @@ docker compose build
 
 ### Configure Cypress REDCap Version
 
-If you want to test against a new version of REDCap that you've downloaded, first <a id="#download-redcap">Download REDCap</a>.
+If you want to test against a new version of REDCap that you've downloaded, first [Download REDCap](#download-redcap).
 
 Then change the following variable in `redcap_cypress/cypress.env.json`:
 
