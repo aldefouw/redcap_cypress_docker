@@ -19,8 +19,8 @@ for ((i=0; i<${#submodule_urls[@]}; ++i)); do
 done
 
 #Move Base Configurations for Cypress
-mv ./config/cypress.config.js ./redcap_cypress/cypress.config.js
-mv ./config/cypress.env.json ./redcap_cypress/cypress.env.json
+cp ./config/cypress.config.js ./redcap_cypress/cypress.config.js
+cp ./config/cypress.env.json ./redcap_cypress/cypress.env.json
 
 #Install the REDCap RSVC repository so automated feature tests can run
 cd redcap_cypress || exit
