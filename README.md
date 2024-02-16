@@ -3,7 +3,15 @@
 This repository includes scripts to download all the repositories necessary for a developer to begin developing automated feature tests with the REDCap Cypress Test Framework: 
 - [REDCap Cypress](https://github.com/aldefouw/redcap_cypress)
 - [REDCap Docker](https://github.com/aldefouw/redcap_docker)
-- REDCap Source - Not a repository. Available via the REDCap Community site with username and password.
+- REDCap Source - Available via the REDCap Community site with username and password.
+
+# Overview
+- [Software Prerequisites](#software-prerequisites)
+- [Instructions](#instructions)
+- [Start REDCap Test Environment](#start-redcap-test-environment)
+- [Configure & Start Cypress](#configure--start-cypress)
+- [Contribute to Feature Tests](#contribute-to-feature-tests)
+- [Update Repositories](#update-repositories)
 
 ### Software Prerequisites:
 - Git (version control)
