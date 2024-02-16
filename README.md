@@ -116,7 +116,7 @@ docker compose build
 
 ### Configure Cypress REDCap Version
 
-If you want to test against a new version of REDCap that you've downloaded, first [Download REDCap](#download-repositories).
+If you want to test against a new version of REDCap that you've downloaded, first [Download REDCap](#developer-toolkit-installation-instructions).
 
 Then change the following variable in `redcap_cypress/cypress.env.json` to the specific version of REDCap you want to test:
 
