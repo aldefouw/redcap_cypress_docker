@@ -14,7 +14,7 @@ This repository includes scripts to download all the necessary components for a 
 - [Create SSH Key](#ssh-key)
 
 [![Windows Tutorial Video](tutorial-windows.png)](https://youtu.be/cQhp9Om8Cgk "Windows Tutorial Video")
-[![macOS Tutorial Video](tutorial- macos.png)](https://youtu.be/AyR-YFNrlZI "macOS Tutorial Video")
+[![macOS Tutorial Video](tutorial-macos.png)](https://youtu.be/AyR-YFNrlZI "macOS Tutorial Video")
 
 ### Software Prerequisites:
 
