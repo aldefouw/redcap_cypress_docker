@@ -133,5 +133,7 @@ To generate a key on your local machine, most of time the command is:
 ssh-keygen
 ```
 
-Generating a key is beyond the scope of what this documentation can cover, but please consult GitHub's SSH documentation here for more information: 
+Generating a key is beyond the scope of what this documentation can cover.
+
+Please consult GitHub's SSH documentation for more information: 
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh
