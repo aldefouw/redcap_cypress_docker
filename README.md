@@ -1,9 +1,6 @@
 # REDCap Cypress Developer Toolkit
 
-This repository includes scripts to download all the repositories necessary for a developer to begin developing automated feature tests on their developer machine with the REDCap Cypress Test Framework: 
-- [REDCap Cypress](https://github.com/aldefouw/redcap_cypress)
-- [REDCap Docker](https://github.com/aldefouw/redcap_docker)
-- REDCap Source - Available via the REDCap Community site with username and password.
+This repository includes scripts to download all the repositories necessary for a developer to begin developing automated feature tests on their developer machine with the REDCap Cypress Test Framework.
 
 # Overview
 - [Software Prerequisites](#software-prerequisites)
@@ -14,6 +11,9 @@ This repository includes scripts to download all the repositories necessary for 
 - [Update Repositories](#update-repositories)
 
 ### Software Prerequisites:
+
+A developer needs the following software on their machine before using the REDCap Cypress Test Framework.
+
 - Git (version control)
      - [for Windows](https://gitforwindows.org/)
      - for macOS options (choose one)
@@ -27,6 +27,7 @@ This repository includes scripts to download all the repositories necessary for 
 - [Node.js](https://nodejs.org/en/download) - available for Windows, macOS, Linux
 
 ### Recommended IDE:
+
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 ### Instructions:
