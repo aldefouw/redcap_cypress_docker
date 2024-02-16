@@ -25,10 +25,7 @@ A developer needs the following software on their machine before using the REDCa
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) - available for Windows, macOS, Linux
 - [Node.js](https://nodejs.org/en/download) - available for Windows, macOS, Linux
-
-### Recommended IDE:
-
-- [Visual Studio Code](https://code.visualstudio.com/)
+- [Visual Studio Code](https://code.visualstudio.com/) - optional.  Recommended IDE.
 
 ### Instructions:
 
