@@ -65,7 +65,7 @@ docker compose up
     
 ### Configure & Start Cypress:
 
-1. Install Cypress & dependencies for REDCap Cypress Test Framework (RCTF).
+1. Install Cypress & dependencies for REDCap Cypress Test Framework.
 
 ```
 cd redcap_cypress
