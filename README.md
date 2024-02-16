@@ -94,11 +94,11 @@ Having your own fork enables you to issue pull requests to aldefouw/redcap_rsvc 
 
 ### Update Repositories:
 
-Run `./update_repos.sh` from this repository.  
+Execute ./update_repos.sh from this repository.  
 
-    ```
-    ./update_repos.sh
-    ```   
+```
+./update_repos.sh
+```   
 
 This will resync your Developer Toolkit to the latest versions.  
 
