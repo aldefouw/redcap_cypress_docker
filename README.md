@@ -4,7 +4,7 @@ This repository includes scripts to download all the repositories necessary for 
 
 # Overview
 - [Software Prerequisites](#software-prerequisites)
-- [Toolkit Installation Instructions](#toolkit-installation-instructions)
+- [Developer Toolkit Installation Instructions](#developer-toolkit-installation-instructions)
 - [Start REDCap Test Environment](#start-redcap-test-environment)
 - [Configure & Start Cypress](#configure--start-cypress)
 - [Contribute to Feature Tests](#contribute-to-feature-tests)
@@ -12,7 +12,7 @@ This repository includes scripts to download all the repositories necessary for 
 
 ### Software Prerequisites:
 
-A developer needs the following software on their machine before using the REDCap Cypress Test Framework.
+A developer needs the following software on their machine before installing this Developer Toolkit.
 
 - Git (version control)
      - [for Windows](https://gitforwindows.org/)
@@ -27,7 +27,7 @@ A developer needs the following software on their machine before using the REDCa
 - [Node.js](https://nodejs.org/en/download) - available for Windows, macOS, Linux
 - [Visual Studio Code](https://code.visualstudio.com/) - optional.  Recommended IDE.
 
-### Toolkit Installation Instructions:
+### Developer Toolkit Installation Instructions:
 
 1. **Clone this repository to your machine.**
     
