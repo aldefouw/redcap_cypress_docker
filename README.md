@@ -19,7 +19,7 @@ This repository includes scripts to download all the repositories necessary for 
 - [Node.js](https://nodejs.org/en/download) - available for Windows, macOS, Linux
 
 ### Recommended IDE:
-- Visual Studio Code
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 ### Download repositories:
 
