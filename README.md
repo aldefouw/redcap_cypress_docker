@@ -51,7 +51,7 @@ A developer needs the following software on their machine before installing this
     ```
     ./download_redcap.sh
     ```   
-    Follow onscreen prompts which require credentials for REDCap Community site.
+    Follow onscreen prompts.  **This step requires credentials for REDCap Community site.**
 
 
 ### Start REDCap Test Environment:
