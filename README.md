@@ -6,9 +6,17 @@ This repository includes scripts to download all the repositories necessary for 
 - REDCap Source - Not a repository. Available via the REDCap Community site with username and password.
 
 ### Software Prerequisites:
-- Git
-- Docker Desktop
-- Node.js
+- Git (version control)
+     - [for Windows](https://gitforwindows.org/)
+     - for macOS options (choose one)
+         - [Homebrew](https://brew.sh/): `brew install git`
+         - [MacPorts](https://www.macports.org/): `sudo port install git` 
+         - [Xcode](https://developer.apple.com/xcode/) - shipped as a binary package
+     - [for Linux](https://git-scm.com/download/linux)
+     
+
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) - available for Windows, macOS, Linux
+- [Node.js](https://nodejs.org/en/download) - available for Windows, macOS, Linux
 
 ### Recommended IDE:
 - Visual Studio Code
