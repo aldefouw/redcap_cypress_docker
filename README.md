@@ -1,6 +1,6 @@
 # REDCap Cypress Developer Toolkit
 
-This repository includes scripts to download all the repositories necessary for a developer to begin automated testing with the REDCap Cypress Test Framework: 
+This repository includes scripts to download all the repositories necessary for a developer to begin developing automated feature tests with the REDCap Cypress Test Framework: 
 - [REDCap Cypress](https://github.com/aldefouw/redcap_cypress)
 - [REDCap Docker](https://github.com/aldefouw/redcap_docker)
 - REDCap Source - Not a repository. Available via the REDCap Community site with username and password.
