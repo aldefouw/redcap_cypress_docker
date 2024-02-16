@@ -21,7 +21,7 @@ This repository includes scripts to download all the repositories necessary for 
 ### Recommended IDE:
 - [Visual Studio Code](https://code.visualstudio.com/)
 
-### Download Dependencies:
+### Instructions:
 
 1. **Clone this repository to your machine.**
     
