@@ -11,7 +11,7 @@ This repository includes scripts to download all the necessary components for a 
 - [Update Repositories](#update-repositories)
 - [Rebuild Docker Containers](#rebuild-docker-containers)
 - [Configure Cypress REDCap version](#configure-cypress-redcap-version)
-- [SSH Key](#ssh-key)
+- [Create SSH Key](#ssh-key)
 
 ### Software Prerequisites:
 
@@ -127,7 +127,7 @@ Then change the following variable in `redcap_cypress/cypress.env.json` to the s
     "redcap_version": "13.1.37"
 ```
 
-### SSH Key
+### Create SSH Key
 
 You will need to place your public key on GitHub for this process to work correctly.
 
