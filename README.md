@@ -9,6 +9,9 @@ This repository includes scripts to download all the necessary components for a 
 - [Configure & Start Cypress](#configure--start-cypress)
 - [Contribute to Feature Tests](#contribute-to-feature-tests)
 - [Update Repositories](#update-repositories)
+- [Rebuild Docker Containers](#rebuild-docker-containers)
+- [Configure Cypress REDCap version](#configure-cypress-redcap-version)
+- [SSH Key](#ssh-key)
 
 ### Software Prerequisites:
 
@@ -106,7 +109,7 @@ This will resync your Developer Toolkit to the latest versions.
 
 ## Additional Information
 
-### Rebuild Docker containers
+### Rebuild Docker Containers
 
 If changes are made to the Docker images, you will need to rebuild your containers before spooling them up.
 
@@ -124,7 +127,7 @@ Then change the following variable in `redcap_cypress/cypress.env.json` to the s
     "redcap_version": "13.1.37"
 ```
 
-### SSH Key needed
+### SSH Key
 
 You will need to place your public key on GitHub for this process to work correctly.
 
