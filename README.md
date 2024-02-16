@@ -13,6 +13,9 @@ This repository includes scripts to download all the necessary components for a 
 - [Configure Cypress REDCap version](#configure-cypress-redcap-version)
 - [Create SSH Key](#ssh-key)
 
+[![Windows Tutorial Video](Configuration Video - Windows.png)](https://youtu.be/cQhp9Om8Cgk "Windows Tutorial Video")
+[![macOS Tutorial Video](Configuration Video - macOS.png)](https://youtu.be/AyR-YFNrlZI "macOS Tutorial Video")
+
 ### Software Prerequisites:
 
 A developer needs the following software on their machine before installing this Developer Toolkit.
