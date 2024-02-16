@@ -90,11 +90,11 @@ git remote rename origin upstream
 git remote add origin <your_fork_url_here>
 ```
 
-This is so you can store the features on your fork until you issue a merge request to aldefouw/redcap_rsvc.
+Having your own fork enables you to issue pull requests to aldefouw/redcap_rsvc after you complete a feature.
 
 ### Update Repositories:
 
-Run `./update_repos.sh` from this repository.
+Run `./update_repos.sh` from this repository.  This will resync your Developer Toolkit to the latest versions.  **Caution:** Only do this if you understand what the implications of updating submodules are.
 
 
 ## Additional Information
