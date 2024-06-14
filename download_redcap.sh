@@ -89,6 +89,27 @@ attempt_unzip_redcap() {
 ## What version of REDCap
 read -p "Enter REDCap version you want to install: " redcap_version
 
+## What version of REDCap
+read -p "Enter REDCap version you want to install: " redcap_version
+
+# Get existing REDCap version from redcap_cypress/cypress.env.json
+CYPRESS_ENV_FILE="./redcap_cypress/cypress.env.json"
+
+# Get the version line from the file
+CYPRESS_REDCAP_VERSION_LINE=$(grep -i "redcap_version" $CYPRESS_ENV_FILE)
+
+# Get the version number from the line
+CURRENT_VERSION=$(echo $CYPRESS_REDCAP_VERSION_LINE | sed -n 's/.*"redcap_version": "\([^"]*\)".*/\1/p')
+
+# Prompt the user for confirmation before replacing the version
+REPLACE_VERSION="N"
+read -p "Configured REDCap version in cypress.env.json is ${CURRENT_VERSION} do you want to replace with ${redcap_version}? (y/${REPLACE_VERSION}):" REPLACE_VERSION
+
+# Replace the version if the user confirms
+if [ "${REPLACE_VERSION}" == "y" ]; then
+    error=$(find "${CYPRESS_ENV_FILE}" -type f -exec sed -i -e "s/$CURRENT_VERSION/${redcap_version}/g" {} \;) || echo "FAILED:\n$error"
+fi
+
 # Zip file
 zip_file="./redcap${redcap_version}.zip"
 
