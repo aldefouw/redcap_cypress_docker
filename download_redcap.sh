@@ -3,8 +3,6 @@
 ## What version of REDCap
 read -p "Enter REDCap version you want to install: " redcap_version
 
-## What version of REDCap
-read -p "Enter REDCap version you want to install: " redcap_version
 
 # Get existing REDCap version from redcap_cypress/cypress.env.json
 CYPRESS_ENV_FILE="./redcap_cypress/cypress.env.json"
