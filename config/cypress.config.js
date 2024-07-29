@@ -1,4 +1,4 @@
-const { defineConfig } = require('cypress')
+const { defineConfig } = require("cypress")
 
 module.exports = defineConfig({
   trashAssetsBeforeRuns: true,
@@ -9,24 +9,27 @@ module.exports = defineConfig({
   requestTimeout: 10000,
   chromeWebSecurity: false,
   retries: 0,
-  numTestsKeptInMemory: 50,
   scrollBehavior: 'bottom',
-  nonGlobalStepDefinitions: false,
-  step_definitions: 'cypress/support/step_definitions/',
   viewportWidth: 1600,
   viewportHeight: 1200,
   watchForFileChanges: false,
   redirectionLimit: 50,
-  hideXHR: true,
+  hideXHR: false,
   e2e: {
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.
     setupNodeEvents(on, config) {
-      require('rctf/plugins/index.js')(on, config);
-      return config;
+      require('rctf/plugins/index.js')(on, config)
+      return config
     },
     baseUrl: 'http://localhost:8080',
-    specPattern: ['cypress/features/*.feature', 'redcap_rsvc/*/[ABC]/*/*.feature'],
-    experimentalSessionAndOrigin: false
-  },
+    stepDefinitions: 'cypress/support/step_definitions',
+    specPattern: [ 'cypress/features/*.feature',
+      'redcap_rsvc/*/[ABC]/*/*.feature',
+      '!redcap_rsvc/*/[ABC]/*/*REDUNDANT*.feature'
+    ],
+    testIsolation: false,
+    experimentalMemoryManagement: false,
+    numTestsKeptInMemory: 10
+  }
 })
