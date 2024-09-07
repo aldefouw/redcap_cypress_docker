@@ -1,32 +1,39 @@
-const { defineConfig } = require('cypress')
+const { defineConfig } = require("cypress")
 
 module.exports = defineConfig({
-  trashAssetsBeforeRuns: true,
-  video: false,
-  projectId: 'PID',
-  defaultCommandTimeout: 10000,
-  responseTimeout: 10000,
-  requestTimeout: 10000,
-  chromeWebSecurity: false,
-  retries: 0,
-  numTestsKeptInMemory: 50,
-  scrollBehavior: 'bottom',
-  nonGlobalStepDefinitions: false,
-  step_definitions: 'cypress/support/step_definitions/',
-  viewportWidth: 1600,
-  viewportHeight: 1200,
-  watchForFileChanges: false,
-  redirectionLimit: 50,
-  hideXHR: true,
-  e2e: {
-    // We've imported your old cypress plugins here.
-    // You may want to clean this up later by importing these.
-    setupNodeEvents(on, config) {
-      require('rctf/plugins/index.js')(on, config);
-      return config;
+    projectId: 'PID',
+    hideXHR: false,
+    e2e: {
+        // We've imported your old cypress plugins here.
+        // You may want to clean this up later by importing these.
+        async setupNodeEvents(on, config) {
+            require('rctf/plugins/index.js')(on, config)
+            return config
+        },
+        baseUrl: 'http://localhost:8080',
+        stepDefinitions: 'cypress/support/step_definitions',
+        specPattern: [ 'cypress/features/*.feature',
+                       'redcap_rsvc/*/[ABC]/*/*.feature',
+                       '!redcap_rsvc/*/[ABC]/*/*REDUNDANT*.feature'
+                     ],
+        testIsolation: false,
+        experimentalMemoryManagement: false,
+        numTestsKeptInMemory: 0,
+        retries: {
+            runMode: 2,
+            openMode: 0
+        },
+        video: true,
+        videoCompression: false,
+        trashAssetsBeforeRuns: true,
+        viewportWidth: 1600,
+        viewportHeight: 1200,
+        defaultCommandTimeout: 60000,
+        responseTimeout: 60000,
+        requestTimeout: 60000,
+        chromeWebSecurity: false,
+        scrollBehavior: 'bottom',
+        watchForFileChanges: false,
+        redirectionLimit: 50
     },
-    baseUrl: 'http://localhost:8080',
-    specPattern: ['cypress/features/*.feature', 'redcap_rsvc/*/[ABC]/*/*.feature'],
-    experimentalSessionAndOrigin: false
-  },
 })

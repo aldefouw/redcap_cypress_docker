@@ -1,6 +1,7 @@
 redcap_cypress/*
 redcap_docker/*
 redcap_source/*
+rctf/*
 .idea
 .DS_Store
 Installation Instructions.txt
@@ -8,3 +9,6 @@ REDCap License.txt
 /tmp/*
 *.zip
 rctf/*
+coverage-report/*
+coverage/*
+edocs/*
