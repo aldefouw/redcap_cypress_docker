@@ -51,6 +51,7 @@ A developer needs the following software on their machine before installing this
     Execute download_repos.sh to download the repositories.  
 
     ```
+    cd redcap_cypress_docker
     ./download_repos.sh
     ```
     This script also configures base settings for Cypress.
