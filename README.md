@@ -17,7 +17,9 @@ This repository includes scripts to download all the necessary components for a 
 - [Update Repositories](#update-repositories)
 - [Rebuild Docker Containers](#rebuild-docker-containers)
 - [Configure Cypress REDCap version](#configure-cypress-redcap-version)
-- [Create SSH Key](#ssh-key)
+- [Create SSH Key](#create-ssh-key)
+
+![Developer Toolkit](developer-toolkit.png)
 
 ### Software Prerequisites:
 
