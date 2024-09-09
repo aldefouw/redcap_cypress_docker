@@ -13,6 +13,7 @@ This repository includes scripts to download all the necessary components for a 
 # Overview
 
 - [Software Prerequisites](#software-prerequisites)
+- [Create SSH Key](#ssh-key-in-github-account)
 - [Developer Toolkit Installation Instructions](#developer-toolkit-installation-instructions)
 - [Configure Cypress REDCap version](#configure-cypress-redcap-version)
 - [Start REDCap Test Environment](#start-redcap-test-environment)
@@ -20,7 +21,6 @@ This repository includes scripts to download all the necessary components for a 
 - [Contribute to Feature Tests](#contribute-to-feature-tests)
 - [Update Repositories](#update-repositories)
 - [Rebuild Docker Containers](#rebuild-docker-containers)
-- [Create SSH Key](#ssh-key-in-github-account)
 
 ![Developer Toolkit](developer-toolkit.png)
 
@@ -161,5 +161,5 @@ docker compose build
 ### Issues and Resolutions:
 
 [^1]: Git Clone Fail: If the message says you do not have permissions or mentions a public key, you might need to setup a [SSH key with Github](#ssh-key-in-github-account).
-[^2]: Shell Script not Running: If you are on Windows and you see no outputs, you will need to run in a Bash shell. Because you have Git, you might have Git Bash installed. At the top of your VS Code terminal, on the right, Click on the down-arrow next to the plus sign and select Git Bash. ![Git Bash](vscode_git_terminal.png)
+[^2]: Shell Script not Running: If you are on Windows and you see no outputs, you will need to run in a Bash shell. Because you have Git, you might have Git Bash installed. At the top of your VS Code terminal, on the right, Click on the down-arrow next to the plus sign and select Git Bash.
 [^3]: Docker Running: If you see an error message about Docker not running or an "error during connect", you will need to start Docker Desktop. On Windows, you can search for Docker Desktop in the Start Menu. On macOS, you can find it in your Applications folder. On Linux, you can start the Docker service with `sudo systemctl start docker`. If you get a message of "no configuration file provided: not found", you might not be in the redcap_docker directory.
