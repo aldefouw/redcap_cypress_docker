@@ -7,6 +7,9 @@ read -p "Enter REDCap version you want to install: " redcap_version
 # Get existing REDCap version from redcap_cypress/cypress.env.json
 CYPRESS_ENV_FILE="./redcap_cypress/cypress.env.json"
 
+# old File path
+CYPRESS_ENV_FILE_OLD="./redcap_cypress/cypress.env.json.old"
+
 # Get the version line from the file
 CYPRESS_REDCAP_VERSION_LINE=$(grep -i "redcap_version" $CYPRESS_ENV_FILE)
 
@@ -20,6 +23,7 @@ read -p "Configured REDCap version in cypress.env.json is ${CURRENT_VERSION} do 
 # Replace the version if the user confirms
 if [ "${REPLACE_VERSION}" == "y" ]; then
     error=$(find "${CYPRESS_ENV_FILE}" -type f -exec sed -i -e "s/$CURRENT_VERSION/${redcap_version}/g" {} \;) || echo "FAILED:\n$error"
+    error=$(mv "${CYPRESS_ENV_FILE}-"*  "${CYPRESS_ENV_FILE_OLD}";) || echo "FAILED:\n$error"
 fi
 
 # Zip file
