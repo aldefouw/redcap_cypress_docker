@@ -15,7 +15,7 @@ This repository includes scripts to download all the necessary components for a 
 - [Software Prerequisites](#software-prerequisites)
 - [Create SSH Key](#ssh-key-in-github-account)
 - [Developer Toolkit Installation Instructions](#developer-toolkit-installation-instructions)
-- [Configure Cypress REDCap version](#configure-cypress-redcap-version)
+- [Changing REDCap Versions](#changing-redcap-versions)
 - [Start REDCap Test Environment](#start-redcap-test-environment)
 - [Configure & Start Cypress](#configure--start-cypress)
 - [Contribute to Feature Tests](#contribute-to-feature-tests)
@@ -88,15 +88,9 @@ Specifically, you will need to
 
    Follow onscreen prompts. **This step requires credentials for REDCap Community site.**
 
-### Configure Cypress REDCap Version
+### Changing REDCap Versions
 
-If you want to test against a new version of REDCap that you've downloaded, first [Download REDCap](#developer-toolkit-installation-instructions).
-
-Then change the following variable in `redcap_cypress/cypress.env.json` to the specific version of REDCap you want to test:
-
-```
-    "redcap_version": "13.1.37"
-```
+To test against a different version of REDCap, simply run `./download_redcap.sh` again and specify the desired version.
 
 ### Start REDCap Test Environment:
 
