@@ -13,6 +13,7 @@ attempt_unzip_redcap() {
 
         #Target Directory
         target_directory=./tmp
+        mkdir -p $target_directory
 
         # Define the destination directory
         destination_directory="redcap_source/redcap_v${redcap_version}"
