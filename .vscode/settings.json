@@ -1,4 +1,5 @@
 {
+    "git.repositoryScanMaxDepth": 2,
     "cucumber.features": [       
         "redcap_cypress/redcap_rsvc/Feature Tests/**/*.feature", //These are the RSVC features
         "redcap_cypress/cypress/features/*.feature" //Standard feature folder
