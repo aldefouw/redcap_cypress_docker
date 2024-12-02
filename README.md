@@ -94,26 +94,8 @@ To test against a different version of REDCap, simply run `./download_redcap.sh`
 
 ### Start REDCap Test Environment:
 
-Start your REDCap Docker containers (PHP/Apache, MySQL, Mailhog). [^3]
-
 ```
-cd redcap_docker
-docker compose up
-```
-
-### Configure & Start Cypress:
-
-1. Install Cypress & dependencies for REDCap Cypress Test Framework.
-
-```
-cd redcap_cypress
-npm install
-```
-
-2. Open Cypress.
-
-```
-npx cypress open
+./run.sh
 ```
 
 ### Contribute to Feature Tests:
