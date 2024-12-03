@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 cd redcap_docker
 docker compose up -d
 
