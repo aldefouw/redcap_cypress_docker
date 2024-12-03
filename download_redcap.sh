@@ -13,6 +13,7 @@ attempt_unzip_redcap() {
 
         #Target Directory
         target_directory=./tmp
+        mkdir -p $target_directory
 
         # Define the destination directory
         destination_directory="redcap_source/redcap_v${redcap_version}"
@@ -67,6 +68,9 @@ attempt_unzip_redcap() {
                 if [ $? -eq 0 ]; then
                   echo "Cleaned up temporary files."
                 fi
+
+                echo "Configuring Cypress to use REDCap v${redcap_version}"
+                sed -i '/  "redcap_version": ".*",/c\  "redcap_version": "'${redcap_version}'",' redcap_cypress/cypress.env.json
 
             else
                 echo "Failed to unzip the file."
