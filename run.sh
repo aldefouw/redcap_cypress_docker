@@ -7,7 +7,7 @@ cd ..
 
 cd redcap_cypress
 npm install
-rm -r cypress/fixtures/*
+rm -rf cypress/fixtures/cdisc_files cypress/fixtures/dictionaries cypress/fixtures/import_files
 cp -a redcap_rsvc/Files/* cypress/fixtures/
 
 if [[ "$OSTYPE" == "msys" ]]; then
