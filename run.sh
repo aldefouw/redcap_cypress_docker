@@ -9,6 +9,7 @@ cd ..
 
 cd redcap_cypress
 npm install
+npm run redcap_rsvc:validate_features
 rm -rf cypress/fixtures/cdisc_files cypress/fixtures/dictionaries cypress/fixtures/import_files
 cp -a redcap_rsvc/Files/* cypress/fixtures/
 
