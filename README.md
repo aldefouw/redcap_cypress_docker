@@ -99,14 +99,6 @@ To test against a different version of REDCap, simply run `./download_redcap.sh`
 ./run.sh
 ```
 
-### Update The REDCap Test Environment:
-
-The following should be run periodically to ensure your local environment is updated to reflect the latest changes from other developers.
-
-```
-./update.sh
-```
-
 ### Contribute to Feature Tests:
 
 1. Create your own fork of redcap_rsvc that is based upon https://github.com/aldefouw/redcap_rsvc
