@@ -8,7 +8,7 @@ docker compose up -d
 cd ..
 
 cd redcap_cypress
-npm install --no-fund --no-audit # We don't really care about vulnerabilities since we're not hosting this project
+npm install --no-fund
 npm run redcap_rsvc:validate_features
 
 # Ideally we'd call "npm run redcap_rsvc:move_files" here instead of the following lines,
