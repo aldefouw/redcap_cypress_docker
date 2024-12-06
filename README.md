@@ -39,7 +39,8 @@ A developer needs the following software on their machine before installing this
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) - available for Windows, macOS, Linux
 - [Node.js](https://nodejs.org/en/download) - available for Windows, macOS, Linux
-- [Visual Studio Code](https://code.visualstudio.com/) - optional. Recommended IDE.
+- [VS Code](https://code.visualstudio.com/) - This is the recommended [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment), but others may be used as well (e.g. PhpStorm).  Be mindful that **Visual Studio Code** is most often referred to as **VS Code** in part to distinguish it from a different application simply called **Visual Studio** which we do not use.
+- [Cucumber Extension for VS Code by cucumber.io](https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official)
 
 ### SSH Key in GitHub Account
 
