@@ -26,6 +26,8 @@ This repository includes scripts to download all the necessary components for a 
 
 ### Software Prerequisites:
 
+The following steps are intended to help set up a testing environment on a personal computer in order to aid with development and contribute changes back to this project.  If instead you're hoping to re-run all automated tests at your institution, see [Creating An Automated Testing Environment](creating-an-automated-testing-environment.md).
+
 A developer needs the following software on their machine before installing this Developer Toolkit.
 
 - Git (version control)
