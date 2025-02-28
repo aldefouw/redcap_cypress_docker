@@ -1,6 +1,35 @@
 # REDCap Cypress Developer Toolkit
 
-This repository includes scripts to download all the necessary components for a developer to begin developing automated feature tests on their developer machine with the REDCap Cypress Test Framework.
+The REDCap Cypress Developer Toolkit provides an automated framework for validating REDCap’s core functionality. Automated testing helps ensure system integrity, reduces manual testing burden, and supports institutions in meeting regulatory compliance requirements (e.g., 21 CFR Part 11).
+
+The toolkit was originally developed by the RSVC Automated Testing Subcommittee (ATS) and is now maintained by Vanderbilt University Medical Center (VUMC). RSVC continues to contribute to updates and actively uses the toolkit for REDCap validation efforts.
+
+This repository includes scripts to download all the necessary components for a developer to begin developing automated feature tests on their developer machine.  This toolkit is based on the industry-standard [Cypress Testing Framework](https://github.com/cypress-io/cypress/blob/develop/README.md).
+
+If you'd like to participate in our ongoing automation efforts, see our [Contribution Guidelines](CONTRIBUTING.md).
+
+
+## What is Automated Testing?
+
+Automated testing involves executing pre-scripted tests against a REDCap instance to validate that core functionality works as expected. These tests:
+  - Ensure system stability after software updates
+  - Reduce redundant manual testing for common workflows
+  - Support regulatory compliance efforts by providing structured validation
+
+Tests are executed in a controlled test environment and should never be run on a production system, as they modify project data.
+
+
+## How Are Automated Tests Selected?
+
+Not all REDCap features are suitable for automation. When determining which features should be tested automatically, the RSVC considers:
+
+  - Reproducibility – Can the test be executed consistently across institutions?
+  - Regulatory Impact – Does the feature support compliance with 21 CFR Part 11?
+  - Complexity – Is automation feasible, or does the feature require manual review?
+  - Test Stability – Does the test produce reliable results across different REDCap versions?
+
+For each REDCap release, RSVC reviews system changes and determines which features should be tested manually and which can be automated.
+
 
 # Windows Tutorial Video
 
