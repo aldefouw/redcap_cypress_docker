@@ -4,8 +4,44 @@ set -e
 
 cd redcap_docker
 docker compose up -d
-
 cd ..
+
+htmlDirLineCount=`docker inspect -f '{{ .Mounts }}' redcap_docker-app-1 | grep /var/www/html | wc -l`
+if [ $htmlDirLineCount = 0 ]; then
+    # Reaching this point means the redcap_source dir is not being mounted in the container via the volumes section
+    # of docker-composer.yml, and should be copied into the container instead.
+    # We used to mount the redcap_source dir as a docker volume,
+    # but this made many features take roughly 3 times as long on Windows,
+    # due to cross filesystem performance limitations and Microsoft Defender on the fly scans.
+
+    cd redcap_source
+
+    # The following commands must give identical output on docker, git bash, mac terminal, etc.
+    # The trailing slash is removed to match output between platforms,
+    # and so the output can be uses for tar's "--exclude-from" option below.
+    lsCommand='ls -1d redcap_v* | cut -d/ -f 1'
+
+    sh -c "$lsCommand" > temp/dev-file-list
+    set +e # Disable failing on errors in case all redcap_v* dirs have been removed and to capture the diff return code
+    docker exec redcap_docker-app-1 sh -c "$lsCommand" > temp/docker-file-list
+    diff temp/dev-file-list temp/docker-file-list > /dev/null
+    filesDiffer=$?
+    set -e
+
+    if [ $filesDiffer ]; then
+        echo Copying new REDCap version directories into the docker container...
+        tar -cz --exclude-from=temp/docker-file-list -f ../redcap_source.tar.gz .
+        docker cp ../redcap_source.tar.gz redcap_docker-app-1:/var/www/html/redcap_source.tar.gz
+        rm ../redcap_source.tar.gz
+        docker exec redcap_docker-app-1 sh -c "
+            cd /var/www/html
+            tar xzf redcap_source.tar.gz
+            rm redcap_source.tar.gz
+        " 
+    fi
+    
+    cd ..
+fi
 
 cd redcap_cypress
 npm install --no-fund
